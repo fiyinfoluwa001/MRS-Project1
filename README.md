@@ -1,4 +1,4 @@
-# Movie Reservation system
+# Movie Reservation System
 - This is a project where I try to build a movie reservation system where users can:
     - Book a ticket
     - Get required seats at the movie theatre.
