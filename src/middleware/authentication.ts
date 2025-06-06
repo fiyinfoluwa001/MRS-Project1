@@ -4,7 +4,7 @@ import { badRequest, notFound } from '../utils/errorhandler';
 interface AuthRequest extends Request {
   user?: { userId: number; email: string };
 }
-export const authentication = async (req: AuthRequest, res: Response, next: NextFunction) => {
+export const authentication = async (req: AuthRequest, res: Response, next: NextFunction): Promise<any> => {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return badRequest(res, 'Authorization header missing or malformed', 400);
